@@ -1,12 +1,9 @@
 """dtool_annotation package."""
 
-try:
-    from importlib.metadata import version, PackageNotFoundError
-except ModuleNotFoundError:
-    from importlib_metadata import version, PackageNotFoundError
+from importlib.metadata import version, PackageNotFoundError
 
 try:
-    __version__ = version(__name__)
+    __version__ = version("dtool-annotation")
 except PackageNotFoundError:
-    # package is not installed
-    pass
+    # Package is not installed.
+    __version__ = "unknown"
