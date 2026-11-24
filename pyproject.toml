@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling>=1.27", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dtool-annotation"
+description = "Add ability to annotate datasets using the dtool CLI"
+readme = "README.rst"
+license = "MIT"
+license-files = ["LICENSE.rst"]
+authors = [
+    {name = "Tjelvar Olsson", email = "tjelvar.olsson@gmail.com"},
+]
+requires-python = ">=3.10"
+dynamic = ["version"]
+dependencies = [
+    "click",
+    "dtoolcore>=3.13.0",
+    "dtool-cli>=0.7.2",
+]
+
+[project.urls]
+Repository = "https://github.com/jic-dtool/dtool-annotation"
+
+[project.entry-points."dtool.cli"]
+annotation = "dtool_annotation.cli:annotation"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.version.raw-options]
+local_scheme = "no-local-version"
+
+[tool.hatch.build.targets.wheel]
+packages = ["dtool_annotation"]
