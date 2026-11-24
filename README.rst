@@ -45,9 +45,15 @@ Add an annotation forcing a specific type::
 
 List all annotations::
 
-    $ dtool annotation ls
+    $ dtool annotation ls $LOCAL_DS_URI
     project dtool-demo
     stars   3
+
+Delete an annotation::
+
+    $ dtool annotation delete $LOCAL_DS_URI stars
+    $ dtool annotation ls $LOCAL_DS_URI
+    project dtool-demo
 
 For more information see the `dtool documentation <https://dtool.readthedocs.io>`_.
 

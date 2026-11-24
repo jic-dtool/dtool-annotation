@@ -31,12 +31,13 @@ Security
 ^^^^^^^^
 
 
-[0.1.2] - 2026-11-24
+[0.2.0] - 2026-11-24
 --------------------
 
 Added
 ^^^^^
 
+- ``dtool annotation delete`` command
 - GitHub Actions workflow that publishes a release to PyPI when a version
   tag is pushed
 
@@ -47,6 +48,8 @@ Changed
   derived from git tags
 - Require ``dtool-cli>=0.7.2``; earlier releases import ``pkg_resources``,
   which is not available without setuptools
+- Require ``dtoolcore>=3.19.0``, the first release that can delete
+  annotations
 
 Removed
 ^^^^^^^
